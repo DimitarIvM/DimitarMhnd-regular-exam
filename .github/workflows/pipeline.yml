@@ -1,5 +1,3 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Build, Test & Deploy
 
@@ -22,9 +20,12 @@ jobs:
       with:
         node-version: 20.x
         cache: 'npm'
-        
     - name: Dependency installation
       run: npm install
+    - name: Runing application
+      run: npm run start
     - name: Runing unit tests
       run: npm run test:unit
+    - name: Echo softuni username
+      run: echo "DimitarMhnd"
     
