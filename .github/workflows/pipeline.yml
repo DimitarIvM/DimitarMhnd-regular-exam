@@ -42,5 +42,7 @@ jobs:
         cache: 'npm'
     - name: Dependency installation
       run: npm install
+    - name: Installing Playwright browsers
+      run: npx playwright install
     - name: Runing UI tests
       run: npm run test:ui 
